@@ -21,3 +21,34 @@ $$
 $$
 
 We choose combinations and not permutations, as the order in which we select the positions of 'heads' does not matter.
+
+
+## Modelling the proabability of a sum in a throwing 2 die event
+
+Assume we have 2 fair-sided die, each numbered 1-6, The outcome space of their sums would look like:
+
+$$
+\Omega_S = \{2,3,4,5,6,7,8,9,10,11,12\}
+$$
+
+Visually we have
+
+$$
+\begin{bmatrix}
+2 & 3 & 4 & 5 & 6 & \boxed{7} \\
+3 & 4 & 5 & 6 & \boxed{7} & 8 \\
+4 & 5 & 6 & \boxed{7} & 8 & 9 \\
+5 & 6 & \boxed{7} & 8 & 9 & 10 \\
+6 & \boxed{7} & 8 & 9 & 10 & 11 \\
+\boxed{7} & 8 & 9 & 10 & 11 & 12
+\end{bmatrix}
+$$
+
+Therefore the simple approach taken to find the probability of any given outcome at any given time is a nested for loop which appends an events list whenever the target sum is found.
+
+For example:
+
+$$
+P(S=7) = \frac{6}{36} = 16.7\%
+$$
+
