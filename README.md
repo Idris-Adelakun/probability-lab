@@ -31,7 +31,7 @@ $$
 \Omega_S = \{2,3,4,5,6,7,8,9,10,11,12\}
 $$
 
-Visually we have
+Visually we have:
 
 $$
 \begin{bmatrix}
@@ -52,3 +52,21 @@ $$
 P(S=7) = \frac{6}{36} = 16.7\%
 $$
 
+
+## Modelling the probability of an anomaly given an alert
+
+Here we aim to model  a simple cloud cost-monitoring system, which will raise an alert if it believes a genuine cost anomaly or spike has occurred. The posterior is as follows:
+
+> Given that an alert was raised what is the probability that a genuine cost anomaly occured:
+
+We outline the following:
+
+- Prior: $P(A)$ - the probability of an anomaly prior to seeing the alert
+- likelihood: $P(+|A)$ - the probability of an alert if a cost anomaly occured
+- Posterior: $P(A|+)$ - the probability of an anomaly given the alert.
+
+From Bayes' theorem we can determine that:
+
+$$
+
+$$
