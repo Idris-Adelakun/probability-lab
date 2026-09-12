@@ -10,6 +10,7 @@ while True:
             ))
         if base_rate <= 0 or base_rate > 1:
                     print("This value must be between 0 and 1")
+                    continue
 
         true_rate = float(
             input(
@@ -17,14 +18,15 @@ while True:
             ))
         if true_rate <= 0 or true_rate > 1:
                     print("This value must be between 0 and 1")
+                    continue
                     
         false_rate = float(
             input(
                 "False positive rate - probability the detector raises an alert "
                     ))
-        false_rate = float(input("Please enter your false positive rate: \n"))
         if false_rate <= 0 or false_rate > 1:
             print("This value must be between 0 and 1")
+            continue
         else: 
             break
     except ValueError as error:
@@ -60,5 +62,5 @@ def probability_of_anomaly_given_alert(
 
 positive, negative = probability_of_anomaly_given_alert(base_rate, true_rate, false_rate)
 
-print(f"Positive alert: {positive:.3%}")
-print(f"Negative alert: {negative:.3%}")
+print(f"Probability of anomaly given positive alert: {positive:.3%}")
+print(f"Probability of anomaly given negative alert: {negative:.3%}")
