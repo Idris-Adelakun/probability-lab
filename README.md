@@ -112,5 +112,20 @@ The first test case ensures that the probabilities returned by the function are 
 The second test involves a known test case using the values displayed in the chart above. We numerically calculate the expected value of the probability and compare it to that returned by the function.
 
 
+# Discrete Random Variable Simulation
+
+Say we have a d.r.v X dfined by the possible values and probabilities:
+
+$$
+
+X =
+\begin{cases}
+x_1, & \text{with probability } p_1 \\
+x_2, & \text{with probability } p_2 \\
+\vdots
+\end{cases}
+$$
+
+We aim to compute the the mean $E[X]$ and variance $Var (X)$ in the case of throwing a fair six-sided die:
 
 
