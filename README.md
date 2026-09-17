@@ -129,3 +129,6 @@ $$
 We aim to compute the the mean $E[X]$ and variance $Var (X)$ in the case of throwing a fair six-sided die:
 
 
+$$
+E[X] = \sum_x xP(X=x)
+$$
