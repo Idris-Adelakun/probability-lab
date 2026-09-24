@@ -13,6 +13,10 @@ def disrecte_rv(values, probabilities):
     if  not math.isclose(sum(probabilities), 1.0):
         raise ValueError("Probabilities must sum to 1")
 
+    for probability in probabilities:
+        if probability < 0 or probability > 1:
+            raise ValueError("Probabilities must be 0 and 1")
+
 
     for value, probability in zip(values, probabilities):
         Ex += value * probability
