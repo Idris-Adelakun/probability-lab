@@ -8,7 +8,11 @@ def disrecte_rv(values, probabilities):
 
     if len(values) != len(probabilities):
         raise ValueError("List lengths do not match")
-    
+
+
+    if  not math.isclose(sum(probabilities), 1.0):
+        raise ValueError("Probabilities must sum to 1")
+
 
     for value, probability in zip(values, probabilities):
         Ex += value * probability
