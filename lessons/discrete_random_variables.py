@@ -15,7 +15,7 @@ def disrecte_rv(values, probabilities):
 
     for probability in probabilities:
         if probability < 0 or probability > 1:
-            raise ValueError("Probabilities must be 0 and 1")
+            raise ValueError("Probabilities must be betweewn 0 and 1")
 
 
     for value, probability in zip(values, probabilities):
